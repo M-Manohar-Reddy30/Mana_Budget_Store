@@ -9,7 +9,7 @@ import product5 from "../../assets/images/products/product5.jpg";
 const products = [
   {
     image: product3,
-    name: "Crocs",
+    name: "camouflage sandal",
     price: "₹1499",
     oldPrice: "₹1999",
     discount: "25% OFF",

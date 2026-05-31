@@ -1,3 +1,7 @@
+/* =========================
+   FEATURED PRODUCTS
+========================= */
+
 .featured-products {
   padding: 120px 8%;
   background: #f8f8f8;
@@ -9,6 +13,7 @@
 
   color: #ff6b00;
   font-weight: 600;
+  font-size: 1rem;
 
   margin-bottom: 15px;
 }
@@ -16,23 +21,33 @@
 .featured-products h2 {
   text-align: center;
 
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+
   color: #111;
 
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
+
+/* =========================
+   PRODUCTS GRID
+========================= */
 
 .products-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
+    repeat(auto-fit, minmax(340px, 1fr));
 
-  gap: 30px;
+  gap: 35px;
 }
 
+/* =========================
+   PRODUCT CARD
+========================= */
+
 .product-card {
-  background: white;
+  background: #fff;
 
   border-radius: 30px;
 
@@ -40,52 +55,86 @@
 
   position: relative;
 
-  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 550px;
 
   box-shadow:
-    0 15px 35px rgba(0,0,0,0.06);
+    0 15px 35px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.35s ease;
 }
 
 .product-card:hover {
-  transform:
-    translateY(-10px);
+  transform: translateY(-10px);
 
   box-shadow:
-    0 25px 50px rgba(0,0,0,0.12);
+    0 25px 50px rgba(0, 0, 0, 0.12);
 }
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
 
 .product-card img {
   width: 100%;
-  height: 280px;
+  height: 320px;
 
-  object-fit: cover;
+  object-fit: contain;
+
+  padding: 10px 20px;
+
+  background: #fff;
+
+  transition: 0.4s ease;
 }
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   DISCOUNT BADGE
+========================= */
 
 .discount-badge {
   position: absolute;
 
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
 
   background: #ff6b00;
   color: white;
 
-  padding: 8px 14px;
+  padding: 10px 18px;
 
   border-radius: 50px;
 
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
 
   z-index: 10;
 }
 
-.product-card h3 {
-  padding: 20px 20px 10px;
+/* =========================
+   PRODUCT NAME
+========================= */
 
-  font-size: 1.3rem;
+.product-card h3 {
+  padding: 0 25px;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
   color: #111;
+
+  margin-bottom: 15px;
 }
+
+/* =========================
+   PRICE SECTION
+========================= */
 
 .price-box {
   display: flex;
@@ -93,11 +142,13 @@
 
   gap: 12px;
 
-  padding: 0 20px;
+  padding: 0 25px;
+
+  margin-bottom: 25px;
 }
 
 .new-price {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 700;
 
   color: #111;
@@ -107,32 +158,65 @@
   color: #999;
 
   text-decoration: line-through;
+
+  font-size: 1.1rem;
 }
 
+/* =========================
+   BUTTON
+========================= */
+
 .product-card button {
-  margin: 20px;
+  margin: auto 25px 25px;
 
-  width: calc(100% - 40px);
+  width: calc(100% - 50px);
 
-  padding: 14px;
+  padding: 16px;
 
   border: none;
+
+  border-radius: 50px;
 
   background: #111;
   color: white;
 
-  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
 
   cursor: pointer;
 
-  font-size: 1rem;
-
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .product-card button:hover {
   background: #ff6b00;
+
+  transform: translateY(-2px);
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .featured-products {
+    padding: 100px 30px;
+  }
+
+  .featured-products h2 {
+    font-size: 2.8rem;
+  }
+
+  .products-grid {
+    grid-template-columns:
+      repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
@@ -142,13 +226,61 @@
 
   .featured-products h2 {
     font-size: 2.3rem;
+    margin-bottom: 50px;
   }
 
   .products-grid {
     grid-template-columns: 1fr;
   }
 
+  .product-card {
+    max-width: 380px;
+    width: 100%;
+    margin: auto;
+
+    min-height: 500px;
+  }
+
   .product-card img {
-    height: 250px;
+    height: 260px;
+  }
+
+  .product-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .new-price {
+    font-size: 1.3rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .featured-products h2 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    border-radius: 25px;
+    min-height: 470px;
+  }
+
+  .product-card img {
+    height: 220px;
+    padding: 10px;
+  }
+
+  .discount-badge {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .product-card button {
+    padding: 14px;
+    font-size: 0.95rem;
   }
 }
