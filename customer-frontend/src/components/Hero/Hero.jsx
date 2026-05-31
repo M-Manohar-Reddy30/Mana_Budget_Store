@@ -72,38 +72,38 @@ function Hero() {
       <div className="hero-right">
 
         <motion.div
-          className="product-card"
+          className="hero-product-card"
           animate={{ y: [0, -10, 0] }}
           transition={{
             repeat: Infinity,
             duration: 4
           }}
         >
-          <img src={shoeImg} alt="" />
+          <img src={shoeImg} alt="Footwear" />
           <p>Footwear</p>
         </motion.div>
 
         <motion.div
-          className="product-card"
+          className="hero-product-card"
           animate={{ y: [0, 10, 0] }}
           transition={{
             repeat: Infinity,
             duration: 5
           }}
         >
-          <img src={watchImg} alt="" />
+          <img src={watchImg} alt="Watch" />
           <p>Watches</p>
         </motion.div>
 
         <motion.div
-          className="product-card"
+          className="hero-product-card"
           animate={{ y: [0, -8, 0] }}
           transition={{
             repeat: Infinity,
             duration: 6
           }}
         >
-          <img src={carImg} alt="" />
+          <img src={carImg} alt="RC Car" />
           <p>RC Cars</p>
         </motion.div>
 
